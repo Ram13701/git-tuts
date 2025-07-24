@@ -1,1 +1,200 @@
-This is an Example
+GIT
+Microsoft Windows [Version 10.0.22631.5624]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git init
+Initialized empty Git repository in C:/Users/Ramanji Reddy/OneDrive/Desktop/git-tuts/.git/
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        code,java
+        example.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        code.java
+        example.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        code.java
+        example.txt
+        example1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git add code.java
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   code.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example.txt
+        example1.txt
+
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git add example.txt
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   code.java
+        new file:   example.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example1.txt
+
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git commit -m "Commiting code and example"
+[master (root-commit) 4484217] Commiting code and example
+ 2 files changed, 2 insertions(+)
+ create mode 100644 code.java
+ create mode 100644 example.txt
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git remote add origin https://github.com/Ram13701/git-tuts.git
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Ram13701/git-tuts.git'
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 315 bytes | 105.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Ram13701/git-tuts.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git checkout -b "copy1"
+Switched to a new branch 'copy1'
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch copy1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch copy1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        example1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git branch
+* copy1
+  master
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git add example.txt
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git add example1.txt
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git status
+On branch copy1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   example1.txt
+
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git commit -m "Commiting example1 to copy1"
+[copy1 a7d2263] Commiting example1 to copy1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example1.txt
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>git push
+fatal: The current branch copy1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin copy1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts> git push --set-upstream origin copy1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 322 bytes | 161.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'copy1' on GitHub by visiting:
+remote:      https://github.com/Ram13701/git-tuts/pull/new/copy1
+remote:
+To https://github.com/Ram13701/git-tuts.git
+ * [new branch]      copy1 -> copy1
+branch 'copy1' set up to track 'origin/copy1'.
+
+C:\Users\Ramanji Reddy\OneDrive\Desktop\git-tuts>
